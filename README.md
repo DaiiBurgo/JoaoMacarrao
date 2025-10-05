@@ -35,8 +35,7 @@ O sistema é projetado com inclusão audiovisual, sendo acessível para pessoas 
 - Pagamento no local (opção para pedidos presenciais).
 - Histórico de pedidos e comprovantes acessíveis ao usuário.
 
-# 💬 Contato e Feedback
-
+💬 Contato e Feedback
 - Formulário de contato direto com o restaurante.
 - Avaliação dos pratos e feedback de experiência.
 
