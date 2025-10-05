@@ -2,7 +2,7 @@
 Projeto Integrador - UNIVESP
 Eixo: Tecnologia da Informação e Computação
 
-# 📖 Visão Geral
+# 📖 Visão Geral - "Tecnologia a serviço do sabor e da inclusão."
 
 O João Macarrão é um restaurante de massas artesanais que busca unir sabor, tecnologia e inclusão.
 Este projeto consiste em um cardápio digital interativo e acessível, que permite ao cliente visualizar os pratos, ouvir suas descrições, assistir a vídeos curtos e realizar pedidos e pagamentos diretamente pelo aplicativo.
