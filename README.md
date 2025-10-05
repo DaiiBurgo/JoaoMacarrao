@@ -1,8 +1,9 @@
-# 🍝 João Macarrão - Cardápio Digital com Inclusão Audiovisual
+# 🍝 João Macarrão - "Tecnologia a serviço do sabor e da inclusão."
 Projeto Integrador - UNIVESP
+
 Eixo: Tecnologia da Informação e Computação
 
-# 📖 Visão Geral - "Tecnologia a serviço do sabor e da inclusão."
+# 📖 Visão Geral 
 
 O João Macarrão é um restaurante de massas artesanais que busca unir sabor, tecnologia e inclusão.
 Este projeto consiste em um cardápio digital interativo e acessível, que permite ao cliente visualizar os pratos, ouvir suas descrições, assistir a vídeos curtos e realizar pedidos e pagamentos diretamente pelo aplicativo.
@@ -67,23 +68,39 @@ O sistema é projetado com inclusão audiovisual, sendo acessível para pessoas 
 # 🗂️ Estrutura do Projeto
 
 joao-macarrao/
+
 │
 ├── backend/
+
 │   ├── core/
+
 │   ├── api/
+
 │   ├── payments/
+
 │   ├── static/
+
 │   ├── media/
+
 │   └── requirements.txt
+
 │
 ├── frontend/
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   ├── pages/
+
 │   │   ├── services/
+
 │   │   ├── context/
+
 │   │   └── assets/
+
 │   └── package.json
+
 │
 └── README.md
 
