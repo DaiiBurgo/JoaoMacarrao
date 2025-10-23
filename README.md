@@ -1,168 +1,258 @@
 # 🍝 João Macarrão - "Tecnologia a serviço do sabor e da inclusão."
-Projeto Integrador - UNIVESP
 
+**Projeto Integrador - UNIVESP**  
 Eixo: Tecnologia da Informação e Computação
 
-# 📖 Visão Geral 
+![Logo João Macarrão](frontend/public/assets/LOGOTIPO_JOAO_MACARRAO_page.png)
 
-O João Macarrão é um restaurante de massas artesanais que busca unir sabor, tecnologia e inclusão.
-Este projeto consiste em um cardápio digital interativo e acessível, que permite ao cliente visualizar os pratos, ouvir suas descrições, assistir a vídeos curtos e realizar pedidos e pagamentos diretamente pelo aplicativo.
+---
 
-O sistema é projetado com inclusão audiovisual, sendo acessível para pessoas com deficiência visual ou auditiva, e utiliza uma arquitetura web moderna e responsiva.
+## 📖 Visão Geral 
 
-# 🍽️ Funcionalidades Principais
+O **João Macarrão** é um restaurante de massas artesanais localizado em Bertioga-SP que busca unir sabor, tecnologia e inclusão. Este projeto consiste em um **cardápio digital interativo e acessível**, que permite ao cliente visualizar os pratos, ouvir suas descrições, assistir a vídeos curtos e realizar pedidos e pagamentos diretamente pelo aplicativo.
 
-👥 Usuários e Administração
-- Cadastro e autenticação de usuários (clientes, atendentes, admin).
-- Painel administrativo com gerenciamento de pratos, categorias e mídias.
-- Controle de disponibilidade e estoque.
+O sistema é projetado com **inclusão audiovisual**, sendo acessível para pessoas com deficiência visual ou auditiva, e utiliza uma arquitetura web moderna e responsiva.
 
-📋 Cardápio Digital Interativo
-- Exibição por categorias: Massas, Molhos, Acompanhamentos, Bebidas e Sobremesas.
-- Descrições narradas por áudio e vídeos demonstrativos.
-- Filtros e busca por nome ou tipo de prato.
-- Modo acessível (alto contraste, fontes ampliadas e tradução em Libras).
+> **"Com o sabor autêntico do litoral"**
 
-🎧 Inclusão Audiovisual
-- Áudio narrado das descrições via Google Cloud Text-to-Speech.
-- Vídeos curtos integrados (pré-preparo e apresentação do prato).
-- Tradução para Libras com VLibras API ou Hand Talk Plugin.
+---
 
-💳 Pagamento In-App
-- Integração com APIs de pagamento seguras, permitindo concluir pedidos pelo app.
-- Métodos suportados:
-- Pix (via API do Mercado Pago, PagBank ou Gerencianet).
-- Cartão de crédito/débito (Stripe, Mercado Pago ou PayPal SDK).
-- Pagamento no local (opção para pedidos presenciais).
-- Histórico de pedidos e comprovantes acessíveis ao usuário.
+## 📍 Informações do Restaurante
 
-💬 Contato e Feedback
-- Formulário de contato direto com o restaurante.
-- Avaliação dos pratos e feedback de experiência.
+**📌 Endereço:**  
+Av. Anchieta, 2969 - Maitinga  
+Bertioga - SP, CEP: 11251-175  
+Centro Comercial Maitinga  
+📍 [Ver no Google Maps](https://www.google.com/maps/place/5V8G%2BQ4+Maitinga,+Bertioga+-+SP)
 
-# 🧱 Arquitetura do Sistema
+**⏰ Horário de Funcionamento:**
+- **Terça a Sábado:** 18:00 - 23:00
+- **Domingo e Segunda:** Fechado
 
-## 🖥️ Backend
+**📱 Contatos:**
+- **WhatsApp:** [(13) 98166-9000](https://wa.me/5513981669000)
+- **Instagram:** [@joaomacarrao013](https://www.instagram.com/joaomacarrao013?igsh=MTh3MnBoeWdhMmZtMg==)
+- **iFood:** [Fazer Pedido](https://www.ifood.com.br/delivery/bertioga-sp/joao-macarrao-maitinga/5fd00482-a61c-48d6-a25a-a2edae29d59f?UTM_Medium=share)
 
-- Linguagem: Python 3.13+
-- Framework: Django 5.2
-- API REST: Django REST Framework
-- Banco de Dados: PostgreSQL
-- Gerenciamento de Mídia: Cloudinary / AWS S3
-- Autenticação: JWT (SimpleJWT)
-- Integrações Externas:
-- Google Cloud TTS (áudio narrado)
-- VLibras API (acessibilidade em Libras)
-- Stripe / Mercado Pago API (pagamentos online)
+---
 
-# 💻 Frontend
-- Framework: React + TypeScript
-- Biblioteca de UI: Material UI (MUI)
-- Gerenciamento de Estado: Redux Toolkit
-- Roteamento: React Router
-- Comunicação com API: Axios
-- Acessibilidade: react-aria / react-a11y
-- Multimídia: React Player + Web Speech API
-- Pagamentos: Stripe.js / MercadoPago.js SDK
+## 🍽️ Funcionalidades Principais
 
-# 🗂️ Estrutura do Projeto
+### 👥 Usuários e Administração
+- ✅ Cadastro e autenticação de usuários (clientes, atendentes, admin)
+- ✅ Painel administrativo com gerenciamento de pratos, categorias e mídias
+- ✅ Controle de disponibilidade e estoque
+- ✅ Dashboard com estatísticas e relatórios
 
-joao-macarrao/
+### 📋 Cardápio Digital Interativo
+- ✅ Exibição por categorias: Massas, Molhos, Acompanhamentos, Bebidas e Sobremesas
+- ✅ Descrições narradas por áudio e vídeos demonstrativos
+- ✅ Filtros e busca por nome ou tipo de prato
+- ✅ Sistema de avaliações e reviews
+- ✅ Carrinho de compras integrado
 
+### ♿ Inclusão Audiovisual (WCAG 2.1 AA)
+- 🔊 Áudio narrado das descrições via Text-to-Speech
+- 🎥 Vídeos curtos integrados (pré-preparo e apresentação do prato)
+- 🦾 Tradução para Libras
+- 👁️ Alto contraste e ajuste de fonte
+- ⌨️ Navegação por teclado
+- 📖 Modo de leitura simplificada
+
+### 💳 Pagamento In-App
+- 💰 Integração com APIs de pagamento seguras
+- **Métodos suportados:**
+  - PIX (QR Code automático)
+  - Cartão de crédito/débito (via Stripe)
+  - Dinheiro (pagamento no local)
+- 📧 Histórico de pedidos e comprovantes
+
+### 💬 Contato e Feedback
+- 📝 Formulário de contato direto com o restaurante
+- ⭐ Sistema de avaliações e reviews de pratos
+- 📊 Feedback de experiência do usuário
+
+---
+
+## 🧱 Arquitetura do Sistema
+
+### 🖥️ Backend
+- **Linguagem:** Python 3.13+
+- **Framework:** Django 4.2
+- **API REST:** Django REST Framework
+- **Banco de Dados:** SQLite (dev) / PostgreSQL (prod)
+- **Autenticação:** JWT (SimpleJWT)
+- **Integrações:**
+  - Text-to-Speech (áudio narrado)
+  - Stripe (pagamentos com cartão)
+  - PIX API (pagamentos PIX)
+
+### 💻 Frontend
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Gerenciamento de Estado:** Zustand
+- **Roteamento:** React Router v6
+- **Comunicação com API:** Axios
+- **UI Components:** Lucide React (ícones)
+- **Notificações:** React Toastify
+- **Acessibilidade:** Custom hooks + ARIA
+- **Pagamentos:** Stripe.js SDK
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+```
+JoaoMacarrao/
 │
-├── backend/
-
-│   ├── core/
-
-│   ├── api/
-
-│   ├── payments/
-
-│   ├── static/
-
-│   ├── media/
-
-│   └── requirements.txt
-
+├── backend/                    # Django API
+│   ├── apps/
+│   │   ├── api/               # Endpoints principais
+│   │   ├── core/              # Models (User, Dish, Order)
+│   │   ├── payments/          # Sistema de pagamentos
+│   │   ├── reviews/           # Avaliações
+│   │   ├── contact/           # Formulário de contato
+│   │   └── accessibility/     # Recursos de acessibilidade
+│   ├── backend/               # Configurações Django
+│   ├── requirements.txt
+│   └── manage.py
 │
-├── frontend/
-
+├── frontend/                   # React App
 │   ├── src/
-
-│   │   ├── components/
-
-│   │   ├── pages/
-
-│   │   ├── services/
-
-│   │   ├── context/
-
-│   │   └── assets/
-
-│   └── package.json
-
+│   │   ├── components/        # Componentes reutilizáveis
+│   │   ├── pages/             # Páginas (Home, About, Cart, etc)
+│   │   ├── hooks/             # Custom hooks
+│   │   ├── services/          # Serviços/API
+│   │   ├── stores/            # Zustand stores
+│   │   ├── styles/            # CSS
+│   │   └── types/             # TypeScript types
+│   ├── public/
+│   │   └── assets/            # Logo e imagens
+│   ├── package.json
+│   └── vite.config.ts
 │
 └── README.md
+```
 
-# ⚙️ Requisitos de Sistema
+---
 
-- Python: 3.13+
-- Node.js: 18+
-- PostgreSQL: 14+
-- PgAdmin: 4+
-- Conta de Desenvolvedor: Stripe, Mercado Pago ou PayPal
+## ⚙️ Requisitos de Sistema
 
-# 🧩 Configuração do Ambiente
-## Backend
+- **Python:** 3.13+
+- **Node.js:** 18+
+- **PostgreSQL:** 14+ (produção)
+- **Conta de Desenvolvedor:** Stripe (opcional para pagamentos)
+
+---
+
+## 🧩 Configuração do Ambiente
+
+### Backend
 
 ```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # Linux/Mac
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
-## Frontend
+### Frontend
+
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
-# 🌐 Acessos
+---
 
-- Backend: http://localhost:8000
-- Admin Django: http://localhost:8000/admin
-- API REST: http://localhost:8000/api
-- Frontend: http://localhost:3000
+## 🌐 Acessos Locais
 
-# 🧠 Boas Práticas e Padrões
+- **Backend API:** http://localhost:8000
+- **Admin Django:** http://localhost:8000/admin
+- **API REST:** http://localhost:8000/api
+- **Frontend:** http://localhost:3000
 
-## O projeto segue princípios de:
-- Arquitetura RESTful
-- Componentização e reutilização de código (React + DRY)
-- Acessibilidade Web (WCAG 2.1 AA)
-- Segurança em transações (HTTPS, JWT, CSRF)
-- Versionamento com Git e GitHub
-- Deploy em nuvem (Render, Railway, ou Vercel)
+---
 
-# 👩‍💻 Autores
-Projeto desenvolvido por alunos da UNIVESP como parte do Projeto Integrador.
+## 🎨 Identidade Visual
 
-- [Daii Burgo]
+**Paleta de Cores:**
+- 🟡 Amarelo Massa: `#FFC300`
+- 🔴 Vermelho Molho: `#E63946`
+- 🔵 Azul Oceano: `#004E7C` → `#39CCCC`
+- ⚫ Antracite: `#1A1A1D`
+- 🤍 Creme: `#FFF5E4`
 
-## Membros do grupo
+**Tema:** Oceânico com ondas animadas e gradientes do mar
 
-- [Daiana S. Lespier]
-- [Filipe S. Gomes]
-- [Helder L. P. Costa]
-- [João Vitor V. de Oliveira]
-- [Regina Mancini]
-- [Welinton Arantes]
-- [Yolanda Maria Fanucchi]
+---
 
-# 📄 Licença
+## 🧠 Boas Práticas e Padrões
 
-Este projeto está licenciado sob a MIT License.
+O projeto segue princípios de:
+- ✅ Arquitetura RESTful
+- ✅ Componentização e reutilização de código (React + DRY)
+- ✅ Acessibilidade Web (WCAG 2.1 AA)
+- ✅ Segurança em transações (HTTPS, JWT, CSRF)
+- ✅ Versionamento com Git e GitHub
+- ✅ Deploy em nuvem (Render, Vercel ou Netlify)
+- ✅ Código limpo e documentado
+- ✅ Responsive Design (Mobile First)
+
+---
+
+## 📱 Features Implementadas
+
+### Para Clientes
+- ✅ Visualizar cardápio completo
+- ✅ Adicionar pratos ao carrinho
+- ✅ Fazer pedidos online
+- ✅ Múltiplas formas de pagamento
+- ✅ Acompanhar status do pedido
+- ✅ Avaliar pratos
+- ✅ Contato direto via formulário
+- ✅ Recursos de acessibilidade
+
+### Para Administradores
+- ✅ Dashboard com estatísticas
+- ✅ Gerenciar cardápio (CRUD)
+- ✅ Visualizar e gerenciar pedidos
+- ✅ Acompanhar vendas e relatórios
+- ✅ Ver avaliações dos clientes
+- ✅ Gerenciar mensagens de contato
+
+---
+
+## 👩‍💻 Equipe de Desenvolvimento
+
+**Projeto Integrador - UNIVESP**
+
+### Coordenação
+- **Daii Burgo** - Líder do Projeto
+
+### Membros do Grupo
+- Daiana S. Lespier
+- Filipe S. Gomes
+- Helder L. P. Costa
+- João Vitor V. de Oliveira
+- Regina Mancini
+- Welinton Arantes
+- Yolanda Maria Fanucchi
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**.
+
+© 2025 João Macarrão. Todos os direitos reservados.
+
+---
+
+**Desenvolvido com ❤️ e 🍝 em Bertioga-SP**
+
+*"Tecnologia a serviço do sabor e da inclusão."*
