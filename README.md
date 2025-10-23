@@ -231,8 +231,8 @@ O projeto segue princípios de:
 
 **Projeto Integrador - UNIVESP**
 
-### Coordenação
-- **Daii Burgo** - Líder do Projeto
+### Autor
+- **Daii Burgo** 
 
 ### Membros do Grupo
 - Daiana S. Lespier
