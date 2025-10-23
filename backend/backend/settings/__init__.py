@@ -12,5 +12,5 @@ if environment == 'production':
 else:
     from .development import *
 
-print(f"🍝 João Macarrão - Running in {environment.upper()} mode")
+print(f"[Joao Macarrao] - Running in {environment.upper()} mode")
 
