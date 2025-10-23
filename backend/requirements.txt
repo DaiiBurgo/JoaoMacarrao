@@ -15,6 +15,9 @@ python-dotenv==1.0.1
 # CORS
 django-cors-headers==4.6.0
 
+# Static files serving
+whitenoise==6.11.0
+
 # Optional: Storage backends (descomente conforme necessário)
 # django-cloudinary-storage==0.3.0
 Pillow==11.0.0
