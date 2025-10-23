@@ -1,0 +1,385 @@
+/**
+ * Rustic & Artisan Textures - João Macarrão
+ * Fase 8: Toque Artesanal e Praiano
+ */
+
+/* ====================================
+   TEXTURAS DE FUNDO
+   ==================================== */
+
+/* Textura de madeira clara */
+.texture-wood {
+  background-image: 
+    linear-gradient(90deg, rgba(255, 245, 228, 0.05) 50%, transparent 50%),
+    linear-gradient(rgba(255, 245, 228, 0.05) 50%, transparent 50%);
+  background-size: 4px 4px;
+}
+
+/* Textura de linho/tecido */
+.texture-linen {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFC300' fill-opacity='0.03'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Textura de papel kraft */
+.texture-kraft {
+  background-color: var(--color-bg-paper);
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.01),
+      rgba(0, 0, 0, 0.01) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.01),
+      rgba(0, 0, 0, 0.01) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+}
+
+/* Padrão de massa/macarrão */
+.pattern-pasta {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFC300' fill-opacity='0.04'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='70' cy='70' r='2'/%3E%3Ccircle cx='90' cy='90' r='2'/%3E%3Ccircle cx='70' cy='10' r='2'/%3E%3Ccircle cx='90' cy='30' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='30' cy='70' r='2'/%3E%3Ccircle cx='50' cy='90' r='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Padrão de ondas/mar */
+.pattern-waves {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 25 0, 50 10 T 100 10' stroke='%23004E7C' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+/* Padrão de frutos do mar */
+.pattern-seafood {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' font-size='20' opacity='0.03'%3E🦐%3C/text%3E%3Ctext x='50' y='60' font-size='20' opacity='0.03'%3E🐚%3C/text%3E%3C/svg%3E");
+}
+
+/* ====================================
+   BORDAS ARTESANAIS
+   ==================================== */
+
+/* Borda desenhada à mão */
+.border-handdrawn {
+  position: relative;
+  border: none;
+}
+
+.border-handdrawn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid var(--color-primary);
+  border-radius: inherit;
+  opacity: 0.6;
+}
+
+/* Borda rústica */
+.border-rustic {
+  border: 3px solid var(--color-primary);
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-primary) 5px,
+    transparent 5px,
+    transparent 10px
+  ) 1;
+}
+
+/* Borda ondulada */
+.border-wavy {
+  position: relative;
+  border: none;
+}
+
+.border-wavy::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='20' height='5' viewBox='0 0 20 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2.5 Q 5 0, 10 2.5 T 20 2.5' stroke='%23FFC300' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+/* ====================================
+   SOMBRAS ARTESANAIS
+   ==================================== */
+
+/* Sombra suave de papel */
+.shadow-paper {
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.07),
+    0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07),
+    0 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Sombra de recorte */
+.shadow-cutout {
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.1),
+    0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Sombra de relevo */
+.shadow-emboss {
+  box-shadow: 
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* ====================================
+   ELEMENTOS DECORATIVOS
+   ==================================== */
+
+/* Divisor ondulado */
+.divider-wave {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+}
+
+.divider-wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q 25 0, 50 20 T 100 20 V 40 H 0 Z' fill='%231A1A1D'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  animation: wave-scroll 10s linear infinite;
+}
+
+@keyframes wave-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Cantos recortados */
+.corner-cut {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0 calc(100% - 20px)
+  );
+}
+
+/* Cantos arredondados irregulares */
+.corner-organic {
+  border-radius: 
+    63% 37% 54% 46% / 55% 48% 52% 45%;
+}
+
+/* ====================================
+   EFEITOS DE TINTA/AQUARELA
+   ==================================== */
+
+/* Splash de tinta */
+.ink-splash {
+  position: relative;
+}
+
+.ink-splash::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 0%,
+    var(--color-primary) 50%,
+    transparent 70%
+  );
+  opacity: 0.3;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  pointer-events: none;
+}
+
+/* Efeito aquarela */
+.watercolor-effect {
+  position: relative;
+  filter: url('#watercolor-filter');
+}
+
+/* SVG Filter for watercolor effect */
+.watercolor-svg-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* ====================================
+   ÍCONES DECORATIVOS
+   ==================================== */
+
+/* Badge artesanal */
+.badge-artisan {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  border-radius: 2rem;
+  transform: rotate(-2deg);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge-artisan::before {
+  content: '✨';
+  font-size: 1.2em;
+}
+
+/* Selo de qualidade */
+.quality-seal {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  box-shadow: 
+    0 0 0 3px var(--color-bg-paper),
+    0 0 0 6px var(--color-primary),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ====================================
+   GRADIENTES ARTESANAIS
+   ==================================== */
+
+/* Gradiente massa fresca */
+.gradient-pasta {
+  background: linear-gradient(
+    135deg,
+    #FFC300 0%,
+    #FFD54F 50%,
+    #FFF5E4 100%
+  );
+}
+
+/* Gradiente molho */
+.gradient-sauce {
+  background: linear-gradient(
+    135deg,
+    #E63946 0%,
+    #FF6B35 50%,
+    #F26670 100%
+  );
+}
+
+/* Gradiente mar */
+.gradient-ocean {
+  background: linear-gradient(
+    135deg,
+    #004E7C 0%,
+    #0066A1 50%,
+    #66B3FF 100%
+  );
+}
+
+/* Gradiente sunset praiano */
+.gradient-sunset {
+  background: linear-gradient(
+    135deg,
+    #FF6B35 0%,
+    #FFC300 50%,
+    #FFD54F 100%
+  );
+}
+
+/* ====================================
+   RESPONSIVIDADE
+   ==================================== */
+
+@media (max-width: 768px) {
+  .divider-wave {
+    height: 30px;
+  }
+
+  .quality-seal {
+    width: 60px;
+    height: 60px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ====================================
+   ACCESSIBILITY
+   ==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .divider-wave::before {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .texture-wood,
+  .texture-linen,
+  .texture-kraft,
+  .pattern-pasta,
+  .pattern-waves,
+  .pattern-seafood {
+    background-image: none;
+  }
+
+  .border-handdrawn::before,
+  .border-wavy::after,
+  .ink-splash::before {
+    display: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .texture-wood,
+  .texture-linen,
+  .pattern-pasta,
+  .pattern-waves,
+  .pattern-seafood,
+  .divider-wave,
+  .ink-splash::before {
+    background: none !important;
+  }
+
+  .shadow-paper,
+  .shadow-cutout,
+  .shadow-emboss {
+    box-shadow: none !important;
+  }
+}
+

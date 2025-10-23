@@ -1,0 +1,591 @@
+/**
+ * Animations & Effects - João Macarrão
+ * Fase 8: Feedback Sensorial e Microanimações
+ */
+
+/* ====================================
+   KEYFRAME ANIMATIONS
+   ==================================== */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+}
+
+/* Bubble Effect */
+@keyframes bubble {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+/* Shake */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Rotate */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spin (loading) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glow Effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 195, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 195, 0, 0.6), 0 0 30px rgba(255, 195, 0, 0.4);
+  }
+}
+
+/* Wave Animation */
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Wiggle */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Scale Up */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Steam Rising (for hot dishes) */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-30px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Bubbling (for cooking effect) */
+@keyframes bubbling {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-3px) scale(1.02);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  75% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+/* ====================================
+   UTILITY ANIMATION CLASSES
+   ==================================== */
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bubble {
+  animation: bubble 0.6s ease-in-out;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-rotate {
+  animation: rotate 1s linear infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.4s ease-out;
+}
+
+.animate-steam {
+  animation: steam 3s ease-in-out infinite;
+}
+
+.animate-bubbling {
+  animation: bubbling 1s ease-in-out infinite;
+}
+
+/* ====================================
+   HOVER EFFECTS
+   ==================================== */
+
+.hover-lift {
+  transition: transform var(--transition-base, 200ms ease-in-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-grow {
+  transition: transform var(--transition-base, 200ms ease-in-out);
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base, 200ms ease-in-out);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 195, 0, 0.5);
+}
+
+.hover-rotate {
+  transition: transform var(--transition-base, 200ms ease-in-out);
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width var(--transition-base, 200ms ease-in-out);
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* ====================================
+   INTERACTIVE FEEDBACK
+   ==================================== */
+
+/* Click ripple effect */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s, opacity 0.6s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ripple-effect:active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  transition: 0s;
+}
+
+/* Success feedback */
+.success-feedback {
+  animation: bubble 0.6s ease-in-out, pulse 0.3s ease-in-out 0.6s;
+}
+
+/* Error feedback */
+.error-feedback {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Loading shimmer */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ====================================
+   SCROLL ANIMATIONS
+   ==================================== */
+
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ====================================
+   DELAY UTILITIES
+   ==================================== */
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* ====================================
+   DURATION UTILITIES
+   ==================================== */
+
+.duration-fast {
+  animation-duration: 0.3s;
+}
+
+.duration-normal {
+  animation-duration: 0.6s;
+}
+
+.duration-slow {
+  animation-duration: 1s;
+}
+
+.duration-slower {
+  animation-duration: 2s;
+}
+
+/* ====================================
+   ACCESSIBILITY - REDUCED MOTION
+   ==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable all custom animations */
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-slide-in-right,
+  .animate-slide-in-left,
+  .animate-float,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-bubble,
+  .animate-shake,
+  .animate-rotate,
+  .animate-spin,
+  .animate-glow,
+  .animate-wave,
+  .animate-wiggle,
+  .animate-scale-up,
+  .animate-steam,
+  .animate-bubbling {
+    animation: none !important;
+  }
+
+  /* Keep functionality but remove motion */
+  .hover-lift:hover,
+  .hover-grow:hover,
+  .hover-rotate:hover {
+    transform: none !important;
+  }
+
+  .scroll-fade-in,
+  .scroll-slide-left,
+  .scroll-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ====================================
+   PRINT STYLES
+   ==================================== */
+
+@media print {
+  /* Disable all animations for printing */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hover-lift,
+  .hover-grow,
+  .hover-glow,
+  .hover-rotate {
+    transform: none !important;
+  }
+}
+

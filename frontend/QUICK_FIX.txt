@@ -1,0 +1,44 @@
+===========================================
+🔥 CORREÇÃO RÁPIDA - Problema no Caminho
+===========================================
+
+PROBLEMA: Caracteres especiais (ã, ç) no caminho
+
+SOLUÇÃO RÁPIDA:
+
+1. Feche PowerShell
+
+2. Abra CMD (Prompt de Comando):
+   - Win + R
+   - Digite: cmd
+   - Enter
+
+3. Cole estes comandos (um de cada vez):
+
+   cd C:\Users\Nilson\João Macarrão\frontend
+   
+   npm install
+   
+   npm run dev
+
+4. Abra navegador em: http://localhost:3000
+
+===========================================
+
+OU RENOMEIE A PASTA:
+
+De: C:\Users\Nilson\João Macarrão
+Para: C:\Users\Nilson\JoaoMacarrao
+
+E depois rode normalmente.
+
+===========================================
+
+FUNCIONA? ✅
+Você verá o site com a nova identidade visual!
+
+PROBLEMAS?
+Veja: SOLUCAO_ERRO_CAMINHO.md
+
+===========================================
+

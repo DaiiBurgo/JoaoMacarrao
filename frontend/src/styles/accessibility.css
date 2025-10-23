@@ -1,0 +1,505 @@
+/**
+ * Estilos de Acessibilidade
+ * 
+ * Este arquivo contém estilos CSS para melhorar a acessibilidade da aplicação.
+ * Inclui estilos para alto contraste, leitura simplificada, foco visível, etc.
+ */
+
+/* ====================================
+   CLASSES UTILITÁRIAS
+   ==================================== */
+
+/* Esconde visualmente mas mantém acessível para leitores de tela */
+.sr-only,
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Torna elemento visível quando focado (útil para "skip links") */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+/* ====================================
+   INDICADORES DE FOCO
+   ==================================== */
+
+/* Foco visível padrão */
+*:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Foco visível aprimorado para elementos interativos */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+/* Remove outline padrão do navegador apenas se estiver usando estilo customizado */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* ====================================
+   ALTO CONTRASTE
+   ==================================== */
+
+.high-contrast,
+html.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --border-color: #ffffff;
+  --link-color: #66b3ff;
+  --link-hover: #99ccff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+.high-contrast body,
+html.high-contrast body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.high-contrast a,
+html.high-contrast a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.high-contrast a:hover,
+html.high-contrast a:hover {
+  color: var(--link-hover);
+  background-color: var(--bg-secondary);
+}
+
+.high-contrast button,
+html.high-contrast button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--border-color);
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea,
+html.high-contrast input,
+html.high-contrast select,
+html.high-contrast textarea {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+/* ====================================
+   LEITURA SIMPLIFICADA
+   ==================================== */
+
+.simplified-reading,
+html.simplified-reading {
+  --font-family: 'Arial', 'Helvetica', sans-serif;
+  --line-height: 1.8;
+  --letter-spacing: 0.5px;
+  --word-spacing: 2px;
+}
+
+.simplified-reading body,
+html.simplified-reading body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+}
+
+.simplified-reading p,
+.simplified-reading li,
+html.simplified-reading p,
+html.simplified-reading li {
+  max-width: 70ch;
+  margin-bottom: 1.5em;
+}
+
+.simplified-reading h1,
+.simplified-reading h2,
+.simplified-reading h3,
+html.simplified-reading h1,
+html.simplified-reading h2,
+html.simplified-reading h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+}
+
+/* Oculta elementos decorativos em modo de leitura simplificada */
+.simplified-reading [role="presentation"],
+.simplified-reading .decorative,
+html.simplified-reading [role="presentation"],
+html.simplified-reading .decorative {
+  display: none !important;
+}
+
+/* ====================================
+   ANIMAÇÕES REDUZIDAS
+   ==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* ====================================
+   LIBRAS
+   ==================================== */
+
+.libras-enabled {
+  /* Reserva espaço para o player de LIBRAS */
+  padding-bottom: 250px;
+}
+
+@media (max-width: 768px) {
+  .libras-enabled {
+    padding-bottom: 180px;
+  }
+}
+
+/* ====================================
+   SKIP LINKS
+   ==================================== */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0066cc;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ffffff;
+}
+
+/* ====================================
+   ELEMENTOS INTERATIVOS
+   ==================================== */
+
+/* Aumenta a área clicável de elementos pequenos */
+button,
+a,
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Garante que botões desabilitados sejam visualmente distintos */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ====================================
+   ESTADOS DE CARREGAMENTO
+   ==================================== */
+
+[aria-busy="true"] {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #0066cc;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====================================
+   MELHORIAS DE CONTRASTE
+   ==================================== */
+
+/* Garante contraste mínimo para texto */
+::selection {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Placeholder com contraste adequado */
+::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #666666;
+}
+
+::-ms-input-placeholder {
+  color: #666666;
+}
+
+/* ====================================
+   RESPONSIVIDADE
+   ==================================== */
+
+/* Aumenta tamanhos em telas pequenas */
+@media (max-width: 768px) {
+  button,
+  a,
+  input,
+  select {
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 16px; /* Previne zoom em iOS */
+  }
+}
+
+/* ====================================
+   IMPRESSÃO
+   ==================================== */
+
+@media print {
+  /* Oculta elementos não essenciais ao imprimir */
+  .accessibility-toolbar,
+  .accessibility-toggle,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Força texto preto em fundo branco para impressão */
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+
+  /* Mostra URLs de links ao imprimir */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666666;
+  }
+}
+
+/* ====================================
+   TEMAS DE COR ESCURA/CLARA
+   ==================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.high-contrast) {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: #444444;
+  }
+}
+
+/* ====================================
+   MENSAGENS DE ERRO E SUCESSO
+   ==================================== */
+
+[role="alert"],
+.error-message {
+  padding: 12px 16px;
+  border-left: 4px solid #d32f2f;
+  background-color: #ffebee;
+  color: #c62828;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+[role="status"],
+.success-message {
+  padding: 12px 16px;
+  border-left: 4px solid #388e3c;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.warning-message {
+  padding: 12px 16px;
+  border-left: 4px solid #f57c00;
+  background-color: #fff3e0;
+  color: #e65100;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* ====================================
+   TABELAS ACESSÍVEIS
+   ==================================== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Zebra striping para melhor leitura */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ====================================
+   MODAIS E DIÁLOGOS
+   ==================================== */
+
+[role="dialog"],
+[role="alertdialog"] {
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  border: 2px solid #0066cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* ====================================
+   TOOLTIPS ACESSÍVEIS
+   ==================================== */
+
+[role="tooltip"] {
+  position: absolute;
+  z-index: 1001;
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ====================================
+   BREADCRUMBS
+   ==================================== */
+
+[aria-label="Breadcrumb"] ol,
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+[aria-label="Breadcrumb"] li::after,
+.breadcrumb li::after {
+  content: "/";
+  margin-left: 8px;
+  color: #666;
+}
+
+[aria-label="Breadcrumb"] li:last-child::after,
+.breadcrumb li:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+[aria-current="page"] {
+  font-weight: bold;
+  color: #333;
+}
+

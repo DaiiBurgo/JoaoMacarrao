@@ -1,0 +1,365 @@
+/**
+ * Navbar Styles - João Macarrão
+ * Fase 8: Identidade Visual
+ */
+
+.navbar {
+  background-color: var(--color-bg-default);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index, 1000);
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2xl);
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  transition: transform var(--transition-base);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 4px 16px rgba(255, 195, 0, 0.5);
+  transition: all var(--transition-base);
+  display: block;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover .logo-image {
+  border-color: var(--color-secondary);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.6);
+  transform: rotate(8deg) scale(1.05);
+}
+
+.logo-tagline {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-cream);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Mobile Toggle */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-white);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base);
+}
+
+.navbar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-white);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-primary);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 80%;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Cart Button */
+.btn-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-white);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-cart:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-text-white);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid var(--color-bg-default);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* iFood Button */
+.btn-ifood {
+  background-color: #EA1D2C;
+  color: var(--color-text-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.btn-ifood:hover {
+  background-color: #D01828;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 29, 44, 0.4);
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: var(--color-text-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: var(--spacing-md);
+  }
+
+  .navbar-links {
+    gap: var(--spacing-md);
+  }
+
+  .btn-ifood span:last-child,
+  .btn-whatsapp span:last-child {
+    display: none;
+  }
+
+  .btn-ifood,
+  .btn-whatsapp {
+    width: 44px;
+    height: 44px;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-full);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: var(--spacing-md);
+  }
+
+  .logo-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-tagline {
+    font-size: 0.85rem;
+    white-space: normal;
+    max-width: 150px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 95px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-default);
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all var(--transition-slow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: var(--spacing-lg);
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: var(--spacing-md);
+    width: 100%;
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+  .navbar-link:hover,
+  .navbar-link.active {
+    background-color: rgba(255, 195, 0, 0.1);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-md);
+  }
+
+  .btn-cart {
+    width: 100%;
+    height: 44px;
+    justify-content: center;
+  }
+
+  .btn-ifood,
+  .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: var(--spacing-md);
+  }
+
+  .btn-ifood span,
+  .btn-whatsapp span {
+    display: inline;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-link::after,
+  .btn-cart,
+  .btn-whatsapp,
+  .navbar-logo {
+    transition: none;
+  }
+
+  .cart-badge {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .navbar {
+    border-bottom: 2px solid currentColor;
+  }
+
+  .navbar-link,
+  .btn-cart,
+  .btn-whatsapp {
+    border: 1px solid currentColor;
+  }
+}
+
