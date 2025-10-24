@@ -23,6 +23,7 @@ import CheckoutPage from './pages/CheckoutPage';
 import ContactPage from './pages/ContactPage';
 import DishDetailPage from './pages/DishDetailPage';
 import OrdersPage from './pages/OrdersPage';
+import MenuPage from './pages/MenuPage';
 import AdminDashboard from './pages/AdminDashboard';
 
 // Context
@@ -61,7 +62,8 @@ const App: React.FC = () => {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/dish/:id" element={<DishDetailPage />} />
               <Route path="/orders" element={<OrdersPage />} />
-              
+              <Route path="/menu" element={<MenuPage />} />
+
               {/* Admin Routes */}
               <Route path="/admin" element={<AdminDashboard />} />
 
